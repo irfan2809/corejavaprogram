@@ -1,0 +1,82 @@
+Packages program:
+
+package com.tnsif.practice;
+
+public class Firstprogram {
+  public   int  a=9;// data member
+    private float g=9.6f;
+    protected int s=5;
+  
+  int d=3;
+    void main() { // member function
+    	
+    }
+	public static void main(String[] args) {
+		//System.out.println("welcome to java");
+		Firstprogram f=new Firstprogram();
+		
+		System.out.println(f.a);
+		System.out.println(f.g);
+		System.out.println(f.s);
+		System.out.println(f.d);
+
+	}
+
+}
+
+package com.tnsif.practice;
+
+public class PublicDemo {
+public static void main(String[] args) {
+	Firstprogram f=new Firstprogram();
+	System.out.println(f.a);
+	//System.out.println(f.g);
+	System.out.println(f.s);
+	System.out.println(f.d);
+
+}
+}
+
+package com.tnsif.secondprogram;
+
+import com.tnsif.practice.Firstprogram;
+
+public class Demo {
+public static void main(String[] args) {
+	Firstprogram f=new Firstprogram();
+	System.out.println(f.a);
+	//System.out.println(f.g);
+	//System.out.println(f.d);
+}
+}
+
+Encapsulation :
+
+
+package com.tnsif.encapsulation;
+// to demostarte encapsulation
+public class EncapsulationDemo {
+  
+	int n;   // data members
+	String s;
+	int a;
+	
+	public void show() {     // member function
+		System.out.println("Serialnumber"+ n +"\t name "+  s+"\t age" +a);
+	}
+}
+
+package com.tnsif.encapsulation;
+
+public class Exec {
+	
+public static void main(String[] args) {
+	
+	EncapsulationDemo e=new EncapsulationDemo();
+	e.n=7;
+	e.s="rashmi";
+	e.a=24;
+	
+	e.show();
+}
+}
