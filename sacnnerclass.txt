@@ -1,0 +1,107 @@
+Today code : 2/4/24
+
+package com.tnsif.sacnnerprogram;
+// to demonstrate scanner program
+public class Person {
+	private String name;    // data member
+	private int income;
+	private int tax;
+	
+	// generate getter and setter method
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getIncome() {
+		return income;
+	}
+	public void setIncome(int income) {
+		this.income = income;
+	}
+	public int getTax() {
+		return tax;
+	}
+	public void setTax(int tax) {
+		this.tax = tax;
+	}
+	@Override
+	public String toString() {
+		return "Person [name=" + name + ", income=" + income + ", tax=" + tax + "]";
+	}
+
+	
+
+}
+
+
+
+package com.tnsif.sacnnerprogram;
+
+public class Taxcal {
+
+	public void caluculatetax(Person p) {
+		
+		if(p.getIncome()<=1600) {
+			p.setTax(0);
+		}
+		else if(p.getIncome()>1600 && p.getIncome()<=15000) {
+			p.setTax(5);
+		}
+		else {
+			p.setTax(10);
+		}
+	}
+}
+
+
+package com.tnsif.sacnnerprogram;
+
+import java.util.Scanner;
+
+public class Personexce {
+	
+public static void main(String[] args) {
+	Scanner sc =new Scanner(System.in);
+	System.out.println("enter person name");
+	String n=sc.nextLine();
+	System.out.println("enter the income");
+	int i=sc.nextInt();
+	
+	// object creation
+	Person p1=new Person();
+	p1.setName(n);
+	p1.setIncome(i);
+	
+	Taxcal c=new Taxcal();
+	
+	c.caluculatetax(p1);
+	System.out.println("after calucation");
+	System.out.println(p1);
+}
+}
+
+
+
+Scanner class program :
+
+
+
+package com.tnsif.sacnnerprogram;
+
+import java.util.Scanner;
+
+public class Scannerdemo {
+	
+public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	System.out.println("enter you are name");
+	String n=sc.nextLine();
+	System.out.println("enter you are id");
+	int i=sc.nextInt();
+	
+	System.out.println("name of the student " + n);
+	System.out.println("id of the student "+ i);
+}
+}
